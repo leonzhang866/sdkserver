@@ -113,7 +113,7 @@ public class DataCfgHandler implements HttpHandler {
 				}
 
 				ResultForDataCfgResponseBean result = new ResultForDataCfgResponseBean();
-				result.setScan_interval("0"); // TODO
+				result.setScan_interval(PropertiesProvider.getScanInterval(query.getAk())); 
 				result.setUpload_interval(PropertiesProvider
 						.getUploadInterval(query.getAk()));
 
